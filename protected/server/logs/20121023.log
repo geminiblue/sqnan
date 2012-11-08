@@ -1,0 +1,35 @@
+2012-10-23 13:10:37,108 ERROR 
+**********************ERROR 2012 - 10 - 23 05:10:37*********************************
+
+ERROR Messages:name 'n' is not defined
+
+['  File "sqnanServer.py", line 13, in <module>\n    w=n\n']
+
+1350969114.4 ERROR 
+**********************ERROR 2012 - 10 - 23 05:11:54*********************************
+
+ERROR Messages:name 'n' is not defined
+
+['  File "sqnanServer.py", line 13, in <module>\n    w=n\n']
+
+1350969181.42 MainProcess ERROR 
+**********************ERROR 2012 - 10 - 23 05:13:01*********************************
+
+ERROR Messages:name 'n' is not defined
+
+['  File "sqnanServer.py", line 13, in <module>\n    w=n\n']
+
+2012-10-23 13:13:40,684 MainProcess ERROR 
+**********************ERROR 2012 - 10 - 23 05:13:40*********************************
+
+ERROR Messages:name 'n' is not defined
+
+['  File "sqnanServer.py", line 13, in <module>\n    w=n\n']
+
+2012-10-23 13:14:28,641 MainProcess LogInfo.py ERROR 
+**********************ERROR 2012 - 10 - 23 05:14:28*********************************
+
+ERROR Messages:name 'n' is not defined
+
+['  File "sqnanServer.py", line 13, in <module>\n    w=n\n']
+

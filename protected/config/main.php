@@ -10,6 +10,7 @@ return array(
 	'name'=>'sqnan',
 	'charset'=>'utf-8',
 	'language'=>'zh_cn',
+	'theme'=>'classic',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -22,7 +23,7 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		
+		'manager',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'123456',

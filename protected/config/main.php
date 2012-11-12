@@ -7,10 +7,9 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'sqnan',
-	'charset'=>'utf-8',
+	'name'=>'dev.sqnan.com',
 	'language'=>'zh_cn',
-	'theme'=>'classic',
+	'charset'=>'utf-8',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -18,12 +17,13 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
-		'application.vendors.*'
+		'application.ext.*',
+		'application.vendors.*',
 	),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		'manager',
+		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'123456',
@@ -49,9 +49,19 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		
+		'cache'=>array(
+			'class'=>'ext.redis.CRedisCache',
+			'hashKey'=>false,
+			'keyPrefix'=>false,
+			'serializer'=>false,
+			'servers'=>array(
+				array(
+					'server'=>'127.0.0.1',
+				 	'port'=>6379,
+				)
+			),
+		),
 		'cachedb'=>array(
-			'class'=>'CDbConnection',
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
 		// uncomment the following to use a MySQL database
@@ -90,11 +100,5 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
-		//新浪微博app相关
-		'weiboAppKey'=>'2040933942',
-		'weiboAppSecret'=>'425b2afdaa451a6fb183b7b6b20cc93d',
-		//腾讯app相关
-		'tencentAppKey'=>'',
-		'tencentAppSecret'=>'',
 	),
 );

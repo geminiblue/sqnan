@@ -1,0 +1,7 @@
+2012-11-10 11:21:03,109 MainProcess ERROR 
+**********************ERROR 2012 - 11 - 10 03:21:03*********************************
+
+ERROR Messages:name 'n' is not defined
+
+['  File "sqnanServer.py", line 13, in <module>\n    w=n\n']
+

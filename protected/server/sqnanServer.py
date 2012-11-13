@@ -29,9 +29,11 @@ try:
 	if(resp!=None):
 		AllData = resp["taobaoke_items_get_response"]["taobaoke_items"]
 		#print AllData
+		tmpKey=[]
 		for data in AllData["taobaoke_item"]:
 			volume = data["volume"]
 			#print volume
+			tmpKey.append(volume)
 			nick = data["nick"]
 			item_location = data["item_location"]
 			title = data["title"]
@@ -41,6 +43,8 @@ try:
 			str = '{nick:"%s",title:"%s",click_url:"%s",pic_url:"%s"}'%(nick,title,click_url,pic_url)
 			print volume
 			r.set(volume,str)
+		r.set("TOPKELASTKEYS",tmpKey)
+		print r.get("TOPKELASTKEYS")
 except Exception,e:
 	print(e)
 

@@ -9,6 +9,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'dev.sqnan.com',
 	'language'=>'zh_cn',
+	'theme'=>'WideAdmin',
 	'charset'=>'utf-8',
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -23,7 +24,7 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		
+		'admin',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'123456',

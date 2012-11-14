@@ -9,7 +9,8 @@ from pub.LogInfo import LogInfo
 import top.api
 import top
 import redis,json
-
+import urllib2
+import threading
 r = redis.StrictRedis(host='localhost', port=10021)
 url="gw.api.taobao.com"
 port=80

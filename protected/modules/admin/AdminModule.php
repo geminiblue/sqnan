@@ -1,6 +1,6 @@
 <?php
 
-class ManagerModule extends CWebModule
+class AdminModule extends CWebModule
 {
 	public function init()
 	{
@@ -9,8 +9,8 @@ class ManagerModule extends CWebModule
 
 		// import the module-level models and components
 		$this->setImport(array(
-			'manager.models.*',
-			'manager.components.*',
+			'admin.models.*',
+			'admin.components.*',
 		));
 	}
 

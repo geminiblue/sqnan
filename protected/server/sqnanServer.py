@@ -29,7 +29,8 @@ try:
 	resp= req.getResponse()
 	if(resp!=None):
 		AllData = resp["taobaoke_items_get_response"]["taobaoke_items"]
-		#print AllData
+		print AllData
+		exit();
 		tmpKey=[]
 		for data in AllData["taobaoke_item"]:
 			volume = data["volume"]

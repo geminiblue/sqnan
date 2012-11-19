@@ -29,8 +29,6 @@ try:
 	resp= req.getResponse()
 	if(resp!=None):
 		AllData = resp["taobaoke_items_get_response"]["taobaoke_items"]
-		print AllData
-		exit();
 		tmpKey=[]
 		for data in AllData["taobaoke_item"]:
 			volume = data["volume"]
@@ -42,11 +40,11 @@ try:
 			price = data["price"]
 			click_url = data["click_url"]
 			pic_url = data["pic_url"]
+			print pic_url
 			str = '{nick:"%s",title:"%s",click_url:"%s",pic_url:"%s"}'%(nick,title,click_url,pic_url)
 			print volume
 			r.set(volume,str)
 		r.set("TOPKELASTKEYS",tmpKey)
-		print r.get("TOPKELASTKEYS")
 except Exception,e:
 	print(e)
 

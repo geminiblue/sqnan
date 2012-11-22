@@ -7,9 +7,9 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'dev.sqnan.com',
+	'name'=>'帅气男-打造一个帅气的你',
 	'language'=>'zh_cn',
-	'theme'=>'WideAdmin',
+	'theme'=>'classic',
 	'charset'=>'utf-8',
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -52,9 +52,6 @@ return array(
 		),
 		'cache'=>array(
 			'class'=>'ext.redis.CRedisCache',
-			'hashKey'=>false,
-			'keyPrefix'=>false,
-			'serializer'=>false,
 			'servers'=>array(
 				array(
 					'server'=>'127.0.0.1',

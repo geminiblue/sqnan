@@ -49,6 +49,7 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
+/*
 		'cache'=>array(
 			'class'=>'ext.redis.CRedisCache',
 			'servers'=>array(
@@ -58,6 +59,10 @@ return array(
 				)
 			),
 		),
+		'cache'=>array(
+			'class'=>'system.caching.CFileCache',
+		),
+*/
 		'cachedb'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),

@@ -7,9 +7,9 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'帅气男-打造一个帅气的你',
+	'name'=>'sqnan.com',
 	'language'=>'zh_cn',
-	'theme'=>'classic',
+	'theme'=>'blackadmin',
 	'charset'=>'utf-8',
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -24,6 +24,7 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
+        'manager'=>array(),
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'123456',

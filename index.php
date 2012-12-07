@@ -1,8 +1,10 @@
 <?php
-
 // change the following paths if necessariy
-$yii='library/framework/yii.php';
-//$yii = "D:/AppServer/yii/framework/yii.php";
+$yii='/data/library/framework/yii.php';
+if (PHP_OS=='WINNT') {
+    $yii = "D:/AppServer/yii/framework/yii.php";
+}
+//
 $config=dirname(__FILE__).'/protected/config/main.php';
 
 // remove the following lines when in production mode

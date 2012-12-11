@@ -5,6 +5,7 @@ class SiteController extends Controller
 	/**
 	 * Declares class-based actions.
 	 */
+    public $layout="//layouts/default";
 	public function actions()
 	{
 		return array(
@@ -29,7 +30,15 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+        $aClever = Yii::app()->cache->get('INDEX_CLEVER_HOT');
+        if($aClever===false){
+            $aClever = array();
+            Yii::app()->cache->set('INDEX_CLEVER_HOT',3600);
+        }
+		$this->render('index',array(
+            'Clever'=>$aClever,    
+        )
+        );
 	}
 
 	/**

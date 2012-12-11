@@ -33,7 +33,11 @@ return array(
 		),
 		
 	),
-
+    'behaviors'=>array(
+        'runEnd'=>array(
+            'class'=>'application.components.WebApplicationEndBehavior',
+        ),
+    ),
 	// application components
 	'components'=>array(
 		'user'=>array(
@@ -50,7 +54,7 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-/*
+
 		'cache'=>array(
 			'class'=>'ext.redis.CRedisCache',
 			'servers'=>array(
@@ -60,6 +64,7 @@ return array(
 				)
 			),
 		),
+/*
 		'cache'=>array(
 			'class'=>'system.caching.CFileCache',
 		),
@@ -72,8 +77,8 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=sqnan',
 			'emulatePrepare' => true,
-			'username' => 'sqnan',
-			'password' => 'sqnan987',
+			'username' => 'root',
+			'password' => 'qeephp',
 			'charset' => 'utf8',
 		),
 		

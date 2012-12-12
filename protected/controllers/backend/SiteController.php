@@ -6,10 +6,7 @@ class SiteController extends Controller
 	{
 		$this->render('index');
 	}
-    public function actionError()
-    {
-        $this->render('error');
-    }
+
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()
